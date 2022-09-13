@@ -1,3 +1,10 @@
+/*
+ * Name: Jack Ambery
+ * Assignment: hw1
+ * Date: 13 September 2022
+ * This is the main class for hw1.
+ * 
+ */
 package hw1;
 
 public class Client {
