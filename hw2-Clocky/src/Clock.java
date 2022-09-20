@@ -1,10 +1,17 @@
+/*
+ * Name: Jack Ambery
+ * Assignment: hw2
+ * Date: 20 September 2022
+ * This is the Clock class for hw2.
+ */
 
 public class Clock {
 	
-	private ClockAlarm clockAlarm;
+	private ClockAlarm clockAlarm = new ClockAlarm();
 	private String currentTime;
 	
 	public Clock(String alarmTime, String currentTime) {
+		//clockAlarm = new ClockAlarm();
 		clockAlarm.addAlarmTime(alarmTime);
 		this.currentTime = currentTime;
 	}
