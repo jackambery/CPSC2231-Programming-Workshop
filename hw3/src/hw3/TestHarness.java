@@ -6,17 +6,11 @@ public class TestHarness {
 
 		BeachReport br = new BeachReport();
 		
-		DailyBeachJournal laguna = new DailyBeachJournal("laguna beach", "moderate", 5);
-		DailyBeachJournal second = new DailyBeachJournal("second beach", "busy", 7);
-		DailyBeachJournal virginia = new DailyBeachJournal("virginia beach", "moderate", 6);
-		DailyBeachJournal wave = new DailyBeachJournal("big wave beach", "quiet", 12);
-		DailyBeachJournal goo = new DailyBeachJournal("goo lagoon", "very busy", 1);
-		
-		br.addJournal(laguna);
-		br.addJournal(second);
-		br.addJournal(virginia);
-		br.addJournal(wave);
-		br.addJournal(goo);
+		br.addJournal("laguna beach", "moderate", 5);
+		br.addJournal("second beach", "busy", 7);
+		br.addJournal("virginia beach", "moderate", 6);
+		br.addJournal("big wave beach", "quiet", 12);
+		br.addJournal("goo lagoon", "very busy", 1);
 		
 		System.out.println(br.getJournalCount() + " journals have been added the beach report.\n");
 		
@@ -31,7 +25,7 @@ public class TestHarness {
 		
 		br.showAllBeaches();
 		System.out.println("\nRemoving second beach...\n");
-		br.removeJournal(second);
+		br.removeJournal("second beach");
 		br.showAllBeaches();
 		
 		System.out.println("\nUsing a while loop: ");

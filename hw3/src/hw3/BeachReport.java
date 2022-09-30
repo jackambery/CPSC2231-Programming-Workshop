@@ -7,12 +7,17 @@ public class BeachReport {
 	
 	private List<DailyBeachJournal> dailyBeachJournals = new ArrayList<>();
 
-	public void addJournal(DailyBeachJournal dbj) {
+	public void addJournal(String name, String activity, int suntan) {
+		DailyBeachJournal dbj = new DailyBeachJournal(name, activity, suntan);
 		dailyBeachJournals.add(dbj);
 	}
 	
-	public void removeJournal(DailyBeachJournal dbj) {
-		dailyBeachJournals.remove(dbj);
+	public void removeJournal(String name) {
+		for (int i = 0; i< dailyBeachJournals.size(); i++) {
+			if (dailyBeachJournals.get(i).getName().equals(name)) {
+				dailyBeachJournals.remove(dailyBeachJournals.get(i));
+			}
+		}
 	}
 	
 	public DailyBeachJournal findBeach(DailyBeachJournal dbj) {
