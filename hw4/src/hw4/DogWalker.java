@@ -1,6 +1,7 @@
 package hw4;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class DogWalker {
@@ -48,20 +49,26 @@ public class DogWalker {
 		}
 		return dogName + " was not found in the list";
 	}
-	
+		
 	public void findDogUsingIterator(String dogName) {
-		for (int i = 0; i < doggies.size(); i++) {
-			if (dogName.equals(doggies.get(i))) {
+		Iterator<String> iter = doggies.iterator();
+		
+		while (iter.hasNext()) {
+			String currentDog = iter.next();
+			if (currentDog.equals(dogName)) {
 				System.out.println("I found my dog: " + dogName);
 			}
 		}
 	}
-	
+
 	public void removeDogUsingIterator(String dogName) {
-		for (int i = 0; i < doggies.size(); i++) {
-			if (dogName.equals(doggies.get(i))) {
-				System.out.println(doggies.get(i) + " has been removed.");
-				doggies.remove(i);
+		Iterator<String> iter = doggies.iterator();
+
+		while (iter.hasNext()) {
+			String currentDog = iter.next();
+			if (currentDog.equals(dogName)) {
+				iter.remove();
+				System.out.println(dogName + " has been removed.");
 			}
 		}
 	}
